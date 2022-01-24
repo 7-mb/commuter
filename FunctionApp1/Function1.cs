@@ -47,8 +47,6 @@ namespace FunctionApp1
                     ));
                 }
 
-                log.LogInformation("asdf");
-
                 foreach (var velo in velos)
                 {
                     var res = await tableClient.AddEntityAsync(velo);
@@ -89,7 +87,6 @@ namespace FunctionApp1
             };
             client.Send(message);
         }
-
     }
 
     public class Velo : ITableEntity
